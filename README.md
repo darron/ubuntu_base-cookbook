@@ -1,4 +1,4 @@
-Skeleton Cookbook
+Ubuntu Base Cookbook
 =================
 
 Requirements
@@ -6,23 +6,25 @@ Requirements
 
 ### Platform:
 
-*List supported platforms here*
+    Ubuntu 12.04LTS
+    Ubuntu 13.04
+    Ubuntu 13.10
 
 ### Cookbooks:
 
-*List cookbook dependencies here*
+None.
 
 Attributes
 ----------
 
-*List attributes here*
+None yet.
 
 Recipes
 -------
 
 ### ubuntu-base::default
 
-*Explain what the recipe does here*
+Sets up all my standard Ubuntu packages and prepares an instance.
 
 Testing
 -------
@@ -31,9 +33,12 @@ Testing
 
 The cookbook provides the following Rake tasks for testing:
 
+    rake build                        # Build AMI using Packer
     rake integration                  # Alias for kitchen:all
     rake kitchen:all                  # Run all test instances
     rake kitchen:default-ubuntu-1204  # Run default-ubuntu-1204 test instance
+    rake kitchen:default-ubuntu-1304  # Run default-ubuntu-1304 test instance
+    rake kitchen:default-ubuntu-1310  # Run default-ubuntu-1310 test instance
     rake lint                         # Lint Chef cookbooks
     rake rubocop                      # Run rubocop tests
     rake spec                         # Run ChefSpec examples
@@ -46,7 +51,7 @@ License and Author
 
 Author:: Darron Froese (darron@froese.org)
 
-Copyright:: 2013, Darron Froese
+Copyright:: 2014, Darron Froese
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
