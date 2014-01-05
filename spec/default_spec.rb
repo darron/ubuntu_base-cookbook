@@ -73,4 +73,7 @@ describe 'ubuntu-base::default' do
     expect(chef_run).to install_package('xz-utils')
   end
 
+  it 'installs htop' do
+    expect(chef_run).to install_package('htop')
+  end
 end

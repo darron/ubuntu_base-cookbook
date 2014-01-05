@@ -4,7 +4,7 @@ maintainer       'Darron Froese'
 maintainer_email 'darron@froese.org'
 license          'Apache 2.0'
 description      'Installs/configures all base Ubuntu installs.'
-version          '0.1.0'
+version          '0.2.0'
 recipe           'ubuntu-base::default', 'Installs/configures all base Ubuntu installs.'
 
 depends 'apt'
