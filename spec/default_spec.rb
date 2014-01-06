@@ -76,4 +76,8 @@ describe 'ubuntu-base::default' do
   it 'installs htop' do
     expect(chef_run).to install_package('htop')
   end
+
+  it 'installs git-core' do
+    expect(chef_run).to install_package('git-core')
+  end
 end
