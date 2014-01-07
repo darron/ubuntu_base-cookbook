@@ -22,14 +22,14 @@ None yet.
 Recipes
 -------
 
-### ubuntu-base::default
+### ubuntu_base::default
 
 Sets up all my standard Ubuntu packages and prepares an instance.
 
 Testing
 -------
 
-[![Build Status](https://travis-ci.org/darron/ubuntu-base-cookbook.png?branch=master)](https://travis-ci.org/darron/ubuntu-base-cookbook)
+[![Build Status](https://travis-ci.org/darron/ubuntu_base-cookbook.png?branch=master)](https://travis-ci.org/darron/ubuntu_base-cookbook)
 
 The cookbook provides the following Rake tasks for testing:
 

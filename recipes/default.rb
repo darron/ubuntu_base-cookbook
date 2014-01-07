@@ -1,6 +1,6 @@
 # encoding: utf-8
 #
-# Cookbook Name:: ubuntu-base
+# Cookbook Name:: ubuntu_base
 # Recipe:: default
 #
 # Copyright (C) 2014, Darron Froese <darron@froese.org>

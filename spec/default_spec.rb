@@ -2,7 +2,7 @@
 require 'spec_helper'
 
 # Write unit tests with ChefSpec - https://github.com/sethvargo/chefspec#readme
-describe 'ubuntu-base::default' do
+describe 'ubuntu_base::default' do
   let(:chef_run) { ChefSpec::Runner.new.converge(described_recipe) }
 
   it 'installs python-software-properties' do

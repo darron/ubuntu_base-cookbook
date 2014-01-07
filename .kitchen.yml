@@ -13,5 +13,5 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[ubuntu-base::default]
+      - recipe[ubuntu_base::default]
     attributes:

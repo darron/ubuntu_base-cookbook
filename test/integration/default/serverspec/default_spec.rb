@@ -2,6 +2,6 @@
 require 'spec_helper'
 
 # Write integration tests with Serverspec - http://serverspec.org/
-describe 'ubuntu-base::default' do
+describe 'ubuntu_base::default' do
 
 end
