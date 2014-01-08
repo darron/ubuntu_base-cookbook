@@ -1,3 +1,7 @@
+# 0.4.0 (08/01/2014)
+
+* Add https apt transport.
+
 # 0.3.0 (07/01/2014)
 
 * Rename to ubuntu_base

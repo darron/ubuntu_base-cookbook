@@ -26,6 +26,10 @@ execute :fix_locale do
   command 'dpkg-reconfigure locales'
 end
 
+execute 'install https transport' do
+  command 'apt-get install -y apt-transport-https'
+end
+
 execute 'apt-get-update' do
   command 'apt-get update'
 end
