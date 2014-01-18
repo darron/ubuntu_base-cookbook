@@ -26,12 +26,12 @@ execute :fix_locale do
   command 'dpkg-reconfigure locales'
 end
 
-execute 'install https transport' do
-  command 'apt-get install -y apt-transport-https'
-end
-
 execute 'apt-get-update' do
   command 'apt-get update'
+end
+
+execute 'install https transport' do
+  command 'apt-get install -y apt-transport-https'
 end
 
 package 'python-software-properties' do
@@ -56,3 +56,10 @@ package 'bzip2'
 package 'dnstracer'
 package 'htop'
 package 'git-core'
+
+package 'ntp'
+
+service 'ntp' do
+  supports status: true, restart: true
+  action [:enable, :start]
+end

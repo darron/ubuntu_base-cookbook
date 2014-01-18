@@ -80,4 +80,16 @@ describe 'ubuntu_base::default' do
   it 'installs git-core' do
     expect(chef_run).to install_package('git-core')
   end
+
+  it 'installs ntp' do
+    expect(chef_run).to install_package('ntp')
+  end
+
+  it 'enables the ntp service' do
+    expect(chef_run).to enable_service('ntp')
+  end
+
+  it 'starts the ntp service' do
+    expect(chef_run).to start_service('ntp')
+  end
 end
