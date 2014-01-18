@@ -18,12 +18,16 @@
 # limitations under the License.
 #
 
-execute :fix_locale do
-  command 'export LANGUAGE=en_US.UTF-8'
-  command 'export LANG=en_US.UTF-8'
-  command 'export LC_ALL=en_US.UTF-8'
-  command 'locale-gen en_US.UTF-8'
-  command 'dpkg-reconfigure locales'
+bash 'fix_locale' do
+  user 'root'
+  cwd '/tmp'
+  code <<-EOH
+    export LANGUAGE=en_US.UTF-8
+    export LANG=en_US.UTF-8
+    export LC_ALL=en_US.UTF-8
+    locale-gen en_US.UTF-8
+    dpkg-reconfigure locales
+  EOH
 end
 
 execute 'apt-get-update' do
