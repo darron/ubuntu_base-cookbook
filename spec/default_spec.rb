@@ -81,6 +81,18 @@ describe 'ubuntu_base::default' do
     expect(chef_run).to install_package('git-core')
   end
 
+  it 'installs iotop' do
+    expect(chef_run).to install_package('iotop')
+  end
+
+  it 'installs glances' do
+    expect(chef_run).to install_package('glances')
+  end
+
+  it 'installs goaccess' do
+    expect(chef_run).to install_package('goaccess')
+  end
+
   it 'installs ntp' do
     expect(chef_run).to install_package('ntp')
   end
