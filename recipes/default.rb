@@ -63,15 +63,18 @@ package 'iotop'
 package 'git-core'
 package 'goaccess'
 
-apt_repository 'glances' do
-  uri          'http://ppa.launchpad.net/arnaud-hartmann/glances-stable/ubuntu'
-  distribution node['lsb']['codename']
-  components   ['main']
-  keyserver    'keyserver.ubuntu.com'
-  key          '81240C6D'
-end
+case node['platform_version']
+when '12.04'
+  apt_repository 'glances' do
+    uri          'http://ppa.launchpad.net/arnaud-hartmann/glances-stable/ubuntu'
+    distribution node['lsb']['codename']
+    components   ['main']
+    keyserver    'keyserver.ubuntu.com'
+    key          '81240C6D'
+  end
 
-package 'glances'
+  package 'glances'
+end
 
 package 'ntp'
 
