@@ -27,7 +27,9 @@ bash 'fix_locale' do
     export LC_ALL=en_US.UTF-8
     locale-gen en_US.UTF-8
     dpkg-reconfigure locales
+    touch /root/.locale-fixed
   EOH
+  not_if {File.exists?("/root/.locale-fixed")}
 end
 
 execute 'apt-get-update' do
