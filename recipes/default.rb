@@ -29,7 +29,7 @@ bash 'fix_locale' do
     dpkg-reconfigure locales
     touch /root/.locale-fixed
   EOH
-  not_if {File.exists?("/root/.locale-fixed")}
+  not_if { File.exists?('/root/.locale-fixed') }
 end
 
 execute 'apt-get-update' do
