@@ -64,6 +64,7 @@ package 'htop'
 package 'iotop'
 package 'git-core'
 package 'goaccess'
+package 'mailutils'
 
 case node['platform_version']
 when '12.04'

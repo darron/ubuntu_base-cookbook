@@ -104,4 +104,8 @@ describe 'ubuntu_base::default' do
   it 'starts the ntp service' do
     expect(chef_run).to start_service('ntp')
   end
+
+  it 'installs the mailutils package' do
+    expect(chef_run).to install_package('mailutils')
+  end
 end
