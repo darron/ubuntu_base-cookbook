@@ -18,6 +18,8 @@
 # limitations under the License.
 #
 
+include_recipe 'chef-sugar::default'
+
 bash 'fix_locale' do
   user 'root'
   cwd '/tmp'
@@ -29,7 +31,8 @@ bash 'fix_locale' do
     dpkg-reconfigure locales
     touch /root/.locale-fixed
   EOH
-  not_if { File.exists?('/root/.locale-fixed') }
+  not_if { File.exist?('/root/.locale-fixed') }
+  not_if { vagrant? }
 end
 
 execute 'apt-get-update' do
@@ -85,3 +88,5 @@ service 'ntp' do
   supports status: true, restart: true
   action [:enable, :start]
 end
+
+include_recipe 'sysdig::default'

@@ -108,4 +108,8 @@ describe 'ubuntu_base::default' do
   it 'installs the mailutils package' do
     expect(chef_run).to install_package('mailutils')
   end
+
+  it 'includes the `sysdig` recipe' do
+    expect(chef_run).to include_recipe('sysdig::default')
+  end
 end
