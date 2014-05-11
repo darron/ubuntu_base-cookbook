@@ -89,4 +89,4 @@ service 'ntp' do
   action [:enable, :start]
 end
 
-include_recipe 'sysdig::default'
+include_recipe 'sysdig::default' unless linode?
