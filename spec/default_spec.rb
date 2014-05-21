@@ -109,6 +109,14 @@ describe 'ubuntu_base::default' do
     expect(chef_run).to install_package('mailutils')
   end
 
+  it 'installs the zsh package' do
+    expect(chef_run).to install_package('zsh')
+  end
+
+  it 'installs the vim package' do
+    expect(chef_run).to install_package('vim')
+  end
+
   it 'includes the `sysdig` recipe' do
     expect(chef_run).to include_recipe('sysdig::default')
   end

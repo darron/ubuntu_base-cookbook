@@ -68,6 +68,8 @@ package 'iotop'
 package 'git-core'
 package 'goaccess'
 package 'mailutils'
+package 'vim'
+package 'zsh'
 
 case node['platform_version']
 when '12.04'
