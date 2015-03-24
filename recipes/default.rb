@@ -20,6 +20,17 @@
 
 include_recipe 'chef-sugar::default'
 
+bash 'update_ulimit' do
+  user 'root'
+  cwd '/tmp'
+  code <<-EOH
+    echo '* hard nofile #{node['ulimit']}' >> /etc/security/limits.conf
+    echo '* soft nofile #{node['ulimit']}' >> /etc/security/limits.conf
+    sysctl -w fs.file-max=#{node['ulimit']}
+    sysctl -p
+  EOH
+end
+
 bash 'fix_locale' do
   user 'root'
   cwd '/tmp'
