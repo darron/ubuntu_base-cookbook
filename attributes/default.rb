@@ -24,3 +24,5 @@ when '12.04'
 else
   default['software-properties']['package'] = 'software-properties-common'
 end
+
+default['ulimit'] = 64000
