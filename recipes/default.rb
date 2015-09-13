@@ -40,6 +40,7 @@ bash 'fix_locale' do
     export LC_ALL=en_US.UTF-8
     locale-gen en_US.UTF-8
     dpkg-reconfigure locales
+    update-locale LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8
     touch /root/.locale-fixed
   EOH
   not_if { File.exist?('/root/.locale-fixed') }
